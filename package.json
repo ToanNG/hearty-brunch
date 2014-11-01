@@ -1,0 +1,26 @@
+{
+  "name": "hearty-brunch",
+  "description": "Description",
+  "author": "Toan Nguyen Gia",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "start": "brunch watch --server",
+    "test": "brunch test"
+  },
+  "dependencies": {
+    "javascript-brunch": ">= 1.0 < 1.8",
+    "css-brunch": ">= 1.0 < 1.8",
+    "uglify-js-brunch": ">= 1.0 < 1.8",
+    "clean-css-brunch": ">= 1.0 < 1.8",
+    "auto-reload-brunch": ">= 1.0 < 1.8",
+    "stylus-brunch": "~1.8.1",
+    "static-jade-brunch": "~1.7.0"
+  },
+  "devDependencies": {
+    "jade-brunch": "~1.8.1"
+  }
+}

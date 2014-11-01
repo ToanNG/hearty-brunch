@@ -1,0 +1,421 @@
+@import _mixins
+@import _variables
+
+body
+  font 400 16px 'Open Sans', sans-serif
+
+#header
+  height header-height
+  color header-text-color
+  background-color header-bg-color
+  
+  h1
+    margin 0
+    font-family 'Lobster', cursive
+    line-height header-height
+    +bp-xs()
+      font-size 1.5em
+      line-height (header-height/2)
+      
+#brunch
+  position absolute
+  top 50%
+  left 50%
+  width 1em
+  height 1em
+  font-size 10px
+  background-color #d29422
+  transition(all 1s)
+  box-shadow:
+    -2em -8em 0 #000,
+    -1em -8em 0 #000,
+     0em -8em 0 #000,
+     1em -8em 0 #000,
+     2em -8em 0 #000,
+
+    -2em -7em 0 #000,
+    -1em -7em 0 #f1edaa,
+     0em -7em 0 #850b08,
+     1em -7em 0 #ef6061,
+     2em -7em 0 #ef6061,
+     3em -7em 0 #000,
+
+    -3em -6em 0 #000,
+    -2em -6em 0 #f1edaa,
+    -1em -6em 0 #850b08,
+     0em -6em 0 #ef6061,
+     1em -6em 0 #fff,
+     2em -6em 0 #ef6061,
+     3em -6em 0 #d90606,
+     4em -6em 0 #000,
+
+    -3em -5em 0 #000,
+    -2em -5em 0 #f1edaa,
+    -1em -5em 0 #850b08,
+     0em -5em 0 #ef6061,
+     1em -5em 0 #ef6061,
+     2em -5em 0 #d90606,
+     3em -5em 0 #d90606,
+     4em -5em 0 #850b08,
+     5em -5em 0 #000,
+     6em -5em 0 #000,
+
+    -4em -4em 0 #000,
+    -3em -4em 0 #f1edaa,
+    -2em -4em 0 #f1edaa,
+    -1em -4em 0 #850b08,
+     0em -4em 0 #d90606,
+     1em -4em 0 #d90606,
+     2em -4em 0 #d90606,
+     3em -4em 0 #d90606,
+     4em -4em 0 #850b08,
+     5em -4em 0 #fff,
+     6em -4em 0 #fff,
+     7em -4em 0 #000,
+     8em -4em 0 #000,
+
+    -4em -3em 0 #000,
+    -3em -3em 0 #f1edaa,
+    -2em -3em 0 #f1edaa,
+    -1em -3em 0 #fff,
+     0em -3em 0 #850b08,
+     1em -3em 0 #850b08,
+     2em -3em 0 #850b08,
+     3em -3em 0 #850b08,
+     4em -3em 0 #f1edaa,
+     5em -3em 0 #f1edaa,
+     6em -3em 0 #f1edaa,
+     7em -3em 0 #f6b972,
+     8em -3em 0 #000,
+
+    -5em -2em 0 #000,
+    -4em -2em 0 #f1edaa,
+    -3em -2em 0 #f1edaa,
+    -2em -2em 0 #f1edaa,
+    -1em -2em 0 #fff,
+     0em -2em 0 #fff,
+     1em -2em 0 #fff,
+     2em -2em 0 #f1edaa,
+     3em -2em 0 #f1edaa,
+     4em -2em 0 #f1edaa,
+     5em -2em 0 #f6b972,
+     6em -2em 0 #f6b972,
+     7em -2em 0 #f1edaa,
+     8em -2em 0 #000,
+
+    -5em -1em 0 #000,
+    -4em -1em 0 #f1edaa,
+    -3em -1em 0 #f1edaa,
+    -2em -1em 0 #fff,
+    -1em -1em 0 #fff,
+     0em -1em 0 #fff,
+     1em -1em 0 #fff,
+     2em -1em 0 #f1edaa,
+     3em -1em 0 #d29422,
+     4em -1em 0 #f6b972,
+     5em -1em 0 #f1edaa,
+     6em -1em 0 #f1edaa,
+     7em -1em 0 #f1edaa,
+     8em -1em 0 #000,
+
+    -6em  0em 0 #000,
+    -5em  0em 0 #f1edaa,
+    -4em  0em 0 #f1edaa,
+    -3em  0em 0 #f1edaa,
+    -2em  0em 0 #fff,
+    -1em  0em 0 #fff,
+     0em  0em 0 #d29422,
+     1em  0em 0 #d29422,
+     2em  0em 0 #d29422,
+     3em  0em 0 #f1edaa,
+     4em  0em 0 #f1edaa,
+     5em  0em 0 #f1edaa,
+     6em  0em 0 #f1edaa,
+     7em  0em 0 #683610,
+     8em  0em 0 #000,
+
+    -6em  1em 0 #000,
+    -5em  1em 0 #f1edaa,
+    -4em  1em 0 #f1edaa,
+    -3em  1em 0 #f1edaa,
+    -2em  1em 0 #d29422,
+    -1em  1em 0 #d29422,
+     0em  1em 0 #f1edaa,
+     1em  1em 0 #f1edaa,
+     2em  1em 0 #f1edaa,
+     3em  1em 0 #f1edaa,
+     4em  1em 0 #87450f,
+     5em  1em 0 #87450f,
+     6em  1em 0 #683610,
+     7em  1em 0 #bc5400,
+     8em  1em 0 #000,
+
+    -7em  2em 0 #000,
+    -6em  2em 0 #f1edaa,
+    -5em  2em 0 #f1edaa,
+    -4em  2em 0 #d29422,
+    -3em  2em 0 #d29422,
+    -2em  2em 0 #ff9f09,
+    -1em  2em 0 #f1edaa,
+     0em  2em 0 #f1edaa,
+     1em  2em 0 #87450f,
+     2em  2em 0 #87450f,
+     3em  2em 0 #683610,
+     4em  2em 0 #683610,
+     5em  2em 0 #bc5400,
+     6em  2em 0 #dd8437,
+     7em  2em 0 #bc5400,
+     8em  2em 0 #000,
+
+    -7em  3em 0 #000,
+    -6em  3em 0 #d29422,
+    -5em  3em 0 #d29422,
+    -4em  3em 0 #ff9f09,
+    -3em  3em 0 #ff9f09,
+    -2em  3em 0 #683610,
+    -1em  3em 0 #683610,
+     0em  3em 0 #683610,
+     1em  3em 0 #683610,
+     2em  3em 0 #bc5400,
+     3em  3em 0 #dd8437,
+     4em  3em 0 #bc5400,
+     5em  3em 0 #bc5400,
+     6em  3em 0 #bc5400,
+     7em  3em 0 #bc5400,
+     8em  3em 0 #000,
+
+    -7em  4em 0 #000,
+    -6em  4em 0 #ff9f09,
+    -5em  4em 0 #ff9f09,
+    -4em  4em 0 #683610,
+    -3em  4em 0 #683610,
+    -2em  4em 0 #683610,
+    -1em  4em 0 #bc5400,
+     0em  4em 0 #bc5400,
+     1em  4em 0 #dd8437,
+     2em  4em 0 #bc5400,
+     3em  4em 0 #bc5400,
+     4em  4em 0 #683610,
+     5em  4em 0 #bc5400,
+     6em  4em 0 #000,
+     7em  4em 0 #000,
+
+    -6em  5em 0 #000,
+    -5em  5em 0 #683610,
+    -4em  5em 0 #87450f,
+    -3em  5em 0 #bc5400,
+    -2em  5em 0 #87450f,
+    -1em  5em 0 #bc5400,
+     0em  5em 0 #bc5400,
+     1em  5em 0 #bc5400,
+     2em  5em 0 #000,
+     3em  5em 0 #000,
+     4em  5em 0 #000,
+     5em  5em 0 #000,
+
+    -6em  6em 0 #000,
+    -5em  6em 0 #87450f,
+    -4em  6em 0 #87450f,
+    -3em  6em 0 #87450f,
+    -2em  6em 0 #000,
+    -1em  6em 0 #000,
+     0em  6em 0 #000,
+     1em  6em 0 #000,
+
+    -6em  7em 0 #000,
+    -5em  7em 0 #000,
+    -4em  7em 0 #000,
+    -3em  7em 0 #000
+  
+  +bp-xs()
+    background-color #954002
+    box-shadow:
+      -2em -8em 0 #000,
+      -1em -8em 0 #000,
+       0em -8em 0 #000,
+       1em -8em 0 #000,
+       2em -8em 0 #000,
+       3em -8em 0 #000,
+
+      -4em -7em 0 #000,
+      -3em -7em 0 #000,
+      -2em -7em 0 #eb7b00,
+      -1em -7em 0 #e59d00,
+       0em -7em 0 #954002,
+       1em -7em 0 #eb7b00,
+       2em -7em 0 #e59d00,
+       3em -7em 0 #ffc204,
+       4em -7em 0 #000,
+       5em -7em 0 #000,
+
+      -5em -6em 0 #000,
+      -4em -6em 0 #eb7b00,
+      -3em -6em 0 #e59d00,
+      -2em -6em 0 #e59d00,
+      -1em -6em 0 #ffc204,
+       0em -6em 0 #fff02a,
+       1em -6em 0 #d16400,
+       2em -6em 0 #eb7b00,
+       3em -6em 0 #fff02a,
+       4em -6em 0 #ffc204,
+       5em -6em 0 #ffc204,
+       6em -6em 0 #000,
+
+      -6em -5em 0 #000,
+      -5em -5em 0 #eb7b00,
+      -4em -5em 0 #e59d00,
+      -3em -5em 0 #e59d00,
+      -2em -5em 0 #ffc204,
+      -1em -5em 0 #fff02a,
+       0em -5em 0 #fff02a,
+       1em -5em 0 #fff02a,
+       2em -5em 0 #d16400,
+       3em -5em 0 #eb7b00,
+       4em -5em 0 #ffc204,
+       5em -5em 0 #e59d00,
+       6em -5em 0 #eb7b00,
+       7em -5em 0 #000,
+
+      -6em -4em 0 #000,
+      -5em -4em 0 #954002,
+      -4em -4em 0 #d16400,
+      -3em -4em 0 #ffc204,
+      -2em -4em 0 #fff02a,
+      -1em -4em 0 #ffc204,
+       0em -4em 0 #ffc204,
+       1em -4em 0 #e59d00,
+       2em -4em 0 #d16400,
+       3em -4em 0 #eb7b00,
+       4em -4em 0 #e59d00,
+       5em -4em 0 #eb7b00,
+       6em -4em 0 #d16400,
+       7em -4em 0 #ffc204,
+       8em -4em 0 #000,
+
+      -6em -3em 0 #000,
+      -5em -3em 0 #e59d00,
+      -4em -3em 0 #e59d00,
+      -3em -3em 0 #d16400,
+      -2em -3em 0 #d16400,
+      -1em -3em 0 #e59d00,
+       0em -3em 0 #e59d00,
+       1em -3em 0 #eb7b00,
+       2em -3em 0 #eb7b00,
+       3em -3em 0 #954002,
+       4em -3em 0 #eb7b00,
+       5em -3em 0 #eb7b00,
+       6em -3em 0 #954002,
+       7em -3em 0 #eb7b00,
+       8em -3em 0 #000,
+
+      -7em -2em 0 #000,
+      -6em -2em 0 #eb7b00,
+      -5em -2em 0 #ffc204,
+      -4em -2em 0 #fff02a,
+      -3em -2em 0 #ffc204,
+      -2em -2em 0 #e59d00,
+      -1em -2em 0 #d16400,
+       0em -2em 0 #eb7b00,
+       1em -2em 0 #eb7b00,
+       2em -2em 0 #eb7b00,
+       3em -2em 0 #000,
+       4em -2em 0 #000,
+       5em -2em 0 #000,
+       6em -2em 0 #000,
+       7em -2em 0 #000,
+       8em -2em 0 #000,
+
+      -7em -1em 0 #000,
+      -6em -1em 0 #eb7b00,
+      -5em -1em 0 #ffc204,
+      -4em -1em 0 #fff02a,
+      -3em -1em 0 #fff02a,
+      -2em -1em 0 #ffc204,
+      -1em -1em 0 #eb7b00,
+       0em -1em 0 #954002,
+       1em -1em 0 #eb7b00,
+       2em -1em 0 #000,
+
+      -7em  0em 0 #000,
+      -6em  0em 0 #eb7b00,
+      -5em  0em 0 #e59d00,
+      -4em  0em 0 #ffc204,
+      -3em  0em 0 #fff02a,
+      -2em  0em 0 #e59d00,
+      -1em  0em 0 #eb7b00,
+       0em  0em 0 #954002,
+       1em  0em 0 #000,
+
+      -7em  1em 0 #000,
+      -6em  1em 0 #eb7b00,
+      -5em  1em 0 #954002,
+      -4em  1em 0 #d16400,
+      -3em  1em 0 #d16400,
+      -2em  1em 0 #954002,
+      -1em  1em 0 #eb7b00,
+       0em  1em 0 #000,
+
+      -7em  2em 0 #000,
+      -6em  2em 0 #954002,
+      -5em  2em 0 #ffc204,
+      -4em  2em 0 #fff02a,
+      -3em  2em 0 #ffc204,
+      -2em  2em 0 #e59d00,
+      -1em  2em 0 #954002,
+       0em  2em 0 #000,
+
+      -7em  3em 0 #000,
+      -6em  3em 0 #eb7b00,
+      -5em  3em 0 #e59d00,
+      -4em  3em 0 #ffc204,
+      -3em  3em 0 #fff02a,
+      -2em  3em 0 #e59d00,
+      -1em  3em 0 #eb7b00,
+       0em  3em 0 #000,
+
+      -6em  4em 0 #000,
+      -5em  4em 0 #eb7b00,
+      -4em  4em 0 #e59d00,
+      -3em  4em 0 #ffc204,
+      -2em  4em 0 #fff02a,
+      -1em  4em 0 #eb7b00,
+       0em  4em 0 #000,
+
+      -5em  5em 0 #000,
+      -4em  5em 0 #eb7b00,
+      -3em  5em 0 #eb7b00,
+      -2em  5em 0 #e59d00,
+      -1em  5em 0 #eb7b00,
+       0em  5em 0 #000,
+
+      -4em  6em 0 #000,
+      -3em  6em 0 #eb7b00,
+      -2em  6em 0 #eb7b00,
+      -1em  6em 0 #eb7b00,
+       0em  6em 0 #000,
+
+      -3em  7em 0 #000,
+      -2em  7em 0 #000,
+      -1em  7em 0 #000
+
+      
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
