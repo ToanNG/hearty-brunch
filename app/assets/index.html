@@ -4,10 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
     <title>Hearty Brunch</title>
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lobster">
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
     <link rel="stylesheet" href="/stylesheets/vendor.css">
     <link rel="stylesheet" href="/stylesheets/app.css">
+    <!-- [if lt IE 9]><script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><script src="javascripts/respond.min.js"></script><![endif]-->
     <script type="text/javascript">
       if (location.hostname === 'localhost') {
         window.brunch = window.brunch || {};
@@ -18,20 +17,18 @@
     <script src="/javascripts/app.js"></script>
   </head>
   <body>
-    <div id="header" class="text-center">
-      <h1 class="hearty-brunch">Hearty Brunch</h1>
-      <h1 class="less-hearty-brunch">Less Hearty Brunch</h1>
-    </div>
+    <div id="header"></div>
     <div id="main">
       <div id="brunch-wrapper">
-        <div id="brunch"></div>
+        <div id="pixel-brunch"></div>
+        <div id="caption" class="text-center">
+          <div class="hearty-brunch">Hearty Brunch</div>
+          <div class="less-hearty-brunch">Less Hearty Brunch...</div>
+        </div>
       </div>
     </div>
     <div id="footer" class="text-center">
-      <p>
-         
-        Hearty Brunch by Toan Nguyen<br>Artwork by Artsiom "Grlmc" Hlushchenia
-      </p>
+      <p>Hearty Brunch by Toan Nguyen<br>Artwork by Artsiom "Grlmc" Hlushchenia</p>
     </div>
   </body>
 </html>
