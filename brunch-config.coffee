@@ -12,10 +12,13 @@ exports.config =
         ]
 
     stylesheets:
-      joinTo: 'stylesheets/app.css'
+      joinTo:
+        'stylesheets/app.css': /^app/
+        'stylesheets/vendor.css': /^vendor/
       order:
         before: [
-          'vendor/styles/bootstrap.css'
+          'vendor/styles/bootstrap.css',
+          'app/styles/main.styl'
         ]
 
     templates:

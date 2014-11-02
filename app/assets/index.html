@@ -6,6 +6,7 @@
     <title>Hearty Brunch</title>
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lobster">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+    <link rel="stylesheet" href="/stylesheets/vendor.css">
     <link rel="stylesheet" href="/stylesheets/app.css">
     <script type="text/javascript">
       if (location.hostname === 'localhost') {
@@ -18,11 +19,19 @@
   </head>
   <body>
     <div id="header" class="text-center">
-      <h1>Hearty Brunch</h1>
+      <h1 class="hearty-brunch">Hearty Brunch</h1>
+      <h1 class="less-hearty-brunch">Less Hearty Brunch</h1>
     </div>
     <div id="main">
-      <div id="brunch"></div>
+      <div id="brunch-wrapper">
+        <div id="brunch"></div>
+      </div>
     </div>
-    <div id="footer"></div>
+    <div id="footer" class="text-center">
+      <p>
+         
+        Hearty Brunch by Toan Nguyen<br>Artwork by Artsiom "Grlmc" Hlushchenia
+      </p>
+    </div>
   </body>
 </html>

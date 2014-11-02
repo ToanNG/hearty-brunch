@@ -1,8 +1,14 @@
 @import _mixins
 @import _variables
 
+html, body
+  height 100%
+  
 body
-  font 400 16px 'Open Sans', sans-serif
+  font 300 16px 'Open Sans', sans-serif
+  line-height 1.5em
+
+// Header // ------------------------------------------------------
 
 #header
   height header-height
@@ -13,10 +19,32 @@ body
     margin 0
     font-family 'Lobster', cursive
     line-height header-height
-    +bp-xs()
-      font-size 1.5em
-      line-height (header-height/2)
+    
+    &.less-hearty-brunch
+      display none
+    
+// Main // --------------------------------------------------------
       
+#main
+  min-height 100%
+  margin-top - header-height
+  margin-bottom - footer-height
+ 
+// Footer // ------------------------------------------------------
+
+#footer
+  display table
+  width 100%
+  height footer-height
+  
+  p
+    display table-cell
+    vertical-align middle
+    font-size 12px
+    font-weight 400
+
+// Home Page // ---------------------------------------------------
+     
 #brunch
   position absolute
   top 50%
@@ -25,20 +53,17 @@ body
   height 1em
   font-size 10px
   background-color #d29422
-  transition(all, 1s)
   box-shadow -2em -8em 0 #000,
     -1em -8em 0 #000,
      0em -8em 0 #000,
      1em -8em 0 #000,
      2em -8em 0 #000,
-
     -2em -7em 0 #000,
     -1em -7em 0 #f1edaa,
      0em -7em 0 #850b08,
      1em -7em 0 #ef6061,
      2em -7em 0 #ef6061,
      3em -7em 0 #000,
-
     -3em -6em 0 #000,
     -2em -6em 0 #f1edaa,
     -1em -6em 0 #850b08,
@@ -47,7 +72,6 @@ body
      2em -6em 0 #ef6061,
      3em -6em 0 #d90606,
      4em -6em 0 #000,
-
     -3em -5em 0 #000,
     -2em -5em 0 #f1edaa,
     -1em -5em 0 #850b08,
@@ -58,7 +82,6 @@ body
      4em -5em 0 #850b08,
      5em -5em 0 #000,
      6em -5em 0 #000,
-
     -4em -4em 0 #000,
     -3em -4em 0 #f1edaa,
     -2em -4em 0 #f1edaa,
@@ -72,7 +95,6 @@ body
      6em -4em 0 #fff,
      7em -4em 0 #000,
      8em -4em 0 #000,
-
     -4em -3em 0 #000,
     -3em -3em 0 #f1edaa,
     -2em -3em 0 #f1edaa,
@@ -86,7 +108,6 @@ body
      6em -3em 0 #f1edaa,
      7em -3em 0 #f6b972,
      8em -3em 0 #000,
-
     -5em -2em 0 #000,
     -4em -2em 0 #f1edaa,
     -3em -2em 0 #f1edaa,
@@ -101,7 +122,6 @@ body
      6em -2em 0 #f6b972,
      7em -2em 0 #f1edaa,
      8em -2em 0 #000,
-
     -5em -1em 0 #000,
     -4em -1em 0 #f1edaa,
     -3em -1em 0 #f1edaa,
@@ -116,7 +136,6 @@ body
      6em -1em 0 #f1edaa,
      7em -1em 0 #f1edaa,
      8em -1em 0 #000,
-
     -6em  0em 0 #000,
     -5em  0em 0 #f1edaa,
     -4em  0em 0 #f1edaa,
@@ -132,7 +151,6 @@ body
      6em  0em 0 #f1edaa,
      7em  0em 0 #683610,
      8em  0em 0 #000,
-
     -6em  1em 0 #000,
     -5em  1em 0 #f1edaa,
     -4em  1em 0 #f1edaa,
@@ -148,7 +166,6 @@ body
      6em  1em 0 #683610,
      7em  1em 0 #bc5400,
      8em  1em 0 #000,
-
     -7em  2em 0 #000,
     -6em  2em 0 #f1edaa,
     -5em  2em 0 #f1edaa,
@@ -165,7 +182,6 @@ body
      6em  2em 0 #dd8437,
      7em  2em 0 #bc5400,
      8em  2em 0 #000,
-
     -7em  3em 0 #000,
     -6em  3em 0 #d29422,
     -5em  3em 0 #d29422,
@@ -182,7 +198,6 @@ body
      6em  3em 0 #bc5400,
      7em  3em 0 #bc5400,
      8em  3em 0 #000,
-
     -7em  4em 0 #000,
     -6em  4em 0 #ff9f09,
     -5em  4em 0 #ff9f09,
@@ -198,7 +213,6 @@ body
      5em  4em 0 #bc5400,
      6em  4em 0 #000,
      7em  4em 0 #000,
-
     -6em  5em 0 #000,
     -5em  5em 0 #683610,
     -4em  5em 0 #87450f,
@@ -211,7 +225,6 @@ body
      3em  5em 0 #000,
      4em  5em 0 #000,
      5em  5em 0 #000,
-
     -6em  6em 0 #000,
     -5em  6em 0 #87450f,
     -4em  6em 0 #87450f,
@@ -220,13 +233,13 @@ body
     -1em  6em 0 #000,
      0em  6em 0 #000,
      1em  6em 0 #000,
-
     -6em  7em 0 #000,
     -5em  7em 0 #000,
     -4em  7em 0 #000,
     -3em  7em 0 #000
-  
+  transition(all 500ms linear)
   +bp-xs()
+    font-size 5px
     background-color #954002
     box-shadow -2em -8em 0 #000,
       -1em -8em 0 #000,
@@ -234,7 +247,6 @@ body
        1em -8em 0 #000,
        2em -8em 0 #000,
        3em -8em 0 #000,
-
       -4em -7em 0 #000,
       -3em -7em 0 #000,
       -2em -7em 0 #eb7b00,
@@ -245,7 +257,6 @@ body
        3em -7em 0 #ffc204,
        4em -7em 0 #000,
        5em -7em 0 #000,
-
       -5em -6em 0 #000,
       -4em -6em 0 #eb7b00,
       -3em -6em 0 #e59d00,
@@ -258,7 +269,6 @@ body
        4em -6em 0 #ffc204,
        5em -6em 0 #ffc204,
        6em -6em 0 #000,
-
       -6em -5em 0 #000,
       -5em -5em 0 #eb7b00,
       -4em -5em 0 #e59d00,
@@ -273,7 +283,6 @@ body
        5em -5em 0 #e59d00,
        6em -5em 0 #eb7b00,
        7em -5em 0 #000,
-
       -6em -4em 0 #000,
       -5em -4em 0 #954002,
       -4em -4em 0 #d16400,
@@ -289,7 +298,6 @@ body
        6em -4em 0 #d16400,
        7em -4em 0 #ffc204,
        8em -4em 0 #000,
-
       -6em -3em 0 #000,
       -5em -3em 0 #e59d00,
       -4em -3em 0 #e59d00,
@@ -305,7 +313,6 @@ body
        6em -3em 0 #954002,
        7em -3em 0 #eb7b00,
        8em -3em 0 #000,
-
       -7em -2em 0 #000,
       -6em -2em 0 #eb7b00,
       -5em -2em 0 #ffc204,
@@ -322,7 +329,6 @@ body
        6em -2em 0 #000,
        7em -2em 0 #000,
        8em -2em 0 #000,
-
       -7em -1em 0 #000,
       -6em -1em 0 #eb7b00,
       -5em -1em 0 #ffc204,
@@ -333,7 +339,6 @@ body
        0em -1em 0 #954002,
        1em -1em 0 #eb7b00,
        2em -1em 0 #000,
-
       -7em  0em 0 #000,
       -6em  0em 0 #eb7b00,
       -5em  0em 0 #e59d00,
@@ -343,7 +348,6 @@ body
       -1em  0em 0 #eb7b00,
        0em  0em 0 #954002,
        1em  0em 0 #000,
-
       -7em  1em 0 #000,
       -6em  1em 0 #eb7b00,
       -5em  1em 0 #954002,
@@ -352,7 +356,6 @@ body
       -2em  1em 0 #954002,
       -1em  1em 0 #eb7b00,
        0em  1em 0 #000,
-
       -7em  2em 0 #000,
       -6em  2em 0 #954002,
       -5em  2em 0 #ffc204,
@@ -361,7 +364,6 @@ body
       -2em  2em 0 #e59d00,
       -1em  2em 0 #954002,
        0em  2em 0 #000,
-
       -7em  3em 0 #000,
       -6em  3em 0 #eb7b00,
       -5em  3em 0 #e59d00,
@@ -370,7 +372,6 @@ body
       -2em  3em 0 #e59d00,
       -1em  3em 0 #eb7b00,
        0em  3em 0 #000,
-
       -6em  4em 0 #000,
       -5em  4em 0 #eb7b00,
       -4em  4em 0 #e59d00,
@@ -378,21 +379,17 @@ body
       -2em  4em 0 #fff02a,
       -1em  4em 0 #eb7b00,
        0em  4em 0 #000,
-
       -5em  5em 0 #000,
       -4em  5em 0 #eb7b00,
       -3em  5em 0 #eb7b00,
       -2em  5em 0 #e59d00,
       -1em  5em 0 #eb7b00,
        0em  5em 0 #000,
-
       -4em  6em 0 #000,
       -3em  6em 0 #eb7b00,
       -2em  6em 0 #eb7b00,
       -1em  6em 0 #eb7b00,
        0em  6em 0 #000,
-
       -3em  7em 0 #000,
       -2em  7em 0 #000,
       -1em  7em 0 #000
-      

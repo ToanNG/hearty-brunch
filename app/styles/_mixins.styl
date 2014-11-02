@@ -1,3 +1,5 @@
+// Cross browser properties
+
 vendor(prop, args)
   -webkit-{prop} args
   -moz-{prop} args
@@ -29,19 +31,31 @@ text-shadow()
   -moz-text-shadow arguments
   -webkit-text-shadow arguments
   text-shadow arguments
+  
+opacity($opacity)
+  opacity $opacity
+  $opacity-ie = $opacity * 100
+  filter unquote('alpha(opacity=' + $opacity-ie + ')') // IE8
 
-prevent-doubleclick()
-  vendor('user-select', none)
+// Breakpoints
+
+smartphoneWidth = 768px
+tabletWidth = 992px
+desktopWidth = 1200px
+
+mqSmartphone = 'only screen and (max-width: ' + smartphoneWidth + ')'
+mqTablet = 'only screen and (max-width: ' + tabletWidth + ')'
+mqDesktop = 'only screen and (max-width: ' + desktopWidth + ')'
 
 bp-xs()
-  @media only screen and (max-width: 768px)
+  @media mqSmartphone
     {block}
 
 bp-sm()
-  @media only screen and (max-width: 992px)
+  @media mqTablet
     {block}
     
 bp-md()
-  @media only screen and (max-width: 1200px)
+  @media mqDesktop
     {block}
     
