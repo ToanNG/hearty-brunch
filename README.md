@@ -1,6 +1,7 @@
 # Hearty Brunch
 
-Hearty Brunch is a [skeleton](http://brunch.io/skeletons.html) used for rapid prototyping.
+Hearty Brunch is a [skeleton](http://brunch.io/skeletons.html) used for rapid templating.
+Demo: [http://hearty-brunch-demo.s3-website-ap-southeast-1.amazonaws.com/](http://hearty-brunch-demo.s3-website-ap-southeast-1.amazonaws.com/)
 
 ## What makes Hearty Brunch hearty?
 
