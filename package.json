@@ -8,7 +8,7 @@
     "url": "https://github.com/ToanNG/hearty-brunch"
   },
   "scripts": {
-    "start": "brunch watch --server",
+    "start": "bower install && npm install",
     "test": "brunch test"
   },
   "dependencies": {
