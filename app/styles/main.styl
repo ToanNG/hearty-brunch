@@ -404,3 +404,15 @@ body
         -3em  7em 0 #000,
         -2em  7em 0 #000,
         -1em  7em 0 #000
+
+// IE Test // -----------------------------------------------------
+
+.rounded
+  border-radius(50%)
+  behavior url("../polyfills/PIE.htc")
+  position relative // Fix disappearing backgrounds/borders/shadows
+
+.cover
+  background-size cover
+  -ms-behavior url("../polyfills/backgroundsize.min.htc")
+  
