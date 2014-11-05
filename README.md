@@ -30,3 +30,6 @@ If the package does not include point to correct main files, you can override it
 
 If you cannot find the available package you need in bower, include the libraries manually in the vendor ```scripts``` or ```styles``` folder respectively.
 
+## What's next
+* Include respond.js for IE8 and below
+* Keep comments on compiled stylesheets
