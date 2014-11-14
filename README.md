@@ -6,7 +6,7 @@ Demo: [http://hearty-brunch-demo.s3-website-ap-southeast-1.amazonaws.com/](http:
 
 ## What makes Hearty Brunch hearty?
 
-Version 0.0.1 comes with Stylus, Jade, Twitter Bootstrap, FontAwesome, jQuery, Modernizr and a bunch of helpful mixins!
+Version 0.0.2 comes with Bower, Stylus, Jade, Twitter Bootstrap, FontAwesome, jQuery, Modernizr, IE polyfills and a bunch of helpful mixins!
 
 ## Getting started
 * Install (if you don't have them):
@@ -18,7 +18,17 @@ Version 0.0.1 comes with Stylus, Jade, Twitter Bootstrap, FontAwesome, jQuery, M
     * `brunch new https://github.com/ToanNG/hearty-brunch.git [appname]` — Create a new app with the skeleton
     * `cd [appname] && brunch watch --server` — watches the project with continuous rebuild. This will also launch HTTP server.
     * `brunch build --production` — builds minified project for production
-
+* Deploy:
+    * include `aws.json` in the root folder
+   ```javascript
+   { 
+      "accessKeyId": "***",
+      "secretAccessKey": "***",
+      "region": "us-east-1",
+      "bucketName": "hearty-brunch-demo"
+   }
+   ```
+    * `grunt deploy-demo`
 
 ## Using Bower:
 
