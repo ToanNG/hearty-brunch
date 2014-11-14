@@ -23,3 +23,5 @@ bower_components
 tmp/
 
 public/
+cache/
+aws.json
